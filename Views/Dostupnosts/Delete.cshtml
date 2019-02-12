@@ -1,0 +1,57 @@
+﻿@model Automobili.Models.Dostupnost
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Želite li obrisati?</h3>
+<div>
+    <h4>Dostupnost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marka Automobila
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarkaAutomobila.Naziv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tip)
+        </dd>
+        <dt>
+            Godina Prozvodnje
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GodinaProzvodnje)
+        </dd>
+        <dt>
+            Benzin Dizel
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BenzinDizel)
+        </dd>
+        <dt>
+            Broj Brzina
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BrojBrzina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kontakt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kontakt)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Obriši" class="btn btn-default" /> |
+        <a asp-action="Index">Natrag na listu</a>
+    </form>
+</div>
